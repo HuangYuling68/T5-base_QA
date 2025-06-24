@@ -1,0 +1,16 @@
+name: t5_base_qa_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.26.4          # 避免 transformers 与 numpy 2.0+ 的兼容问题
+  - pip:
+      - torch==2.2.0
+      - transformers==4.41.1
+      - datasets
+      - accelerate
+      - rouge_chinese
+      - bert-score
+      - nltk
